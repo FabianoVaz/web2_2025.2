@@ -1,0 +1,22 @@
+{
+  "alunos": [
+    {
+      "nome": "Erica Yara Pereira de Freitas",
+      "matricula": "202410040010",
+      "foto": "https://suap.ifba.edu.br/media/alunos/150x200/158802.DI4QXlaR3YR5.jpg",
+      "turma": "3º Ano - Informática"
+    },
+    {
+      "nome": "Israel Custodio Alves",
+      "matricula": "202410040011",
+      "foto": "https://suap.ifba.edu.br/media/alunos/150x200/158811.DHpg6muaMt6Y.jpg",
+      "turma": "2º Ano - Informática"
+    },
+    {
+      "nome": "Manoela da Conceição Lima",
+      "matricula": "202410040019",
+      "foto": "https://suap.ifba.edu.br/media/alunos/150x200/160467.Aj4w5MTqhHvm.jpg",
+      "turma": "1º Ano - Informática"
+    }
+  ]
+}
