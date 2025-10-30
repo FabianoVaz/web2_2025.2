@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - Método POST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="form-aluno" action="">
+        Nome: <input type="text" id="nome" name="nome"> <br>
+        Matricula:<input type="text" id="matricula" name="matricula"> <br>
+        Turma:<input type="text" id="turma" name="turma"> <br>
+        Foto: <input type="text" id="foto" name="foto"> <br>
+
+        <button type="submit"> Cadastrar </button>
+    </form>
+
+    <script>
+        const form_aluno = document.querySelector('#form-aluno');
+
+        form_aluno.addEventListener('submit', hello)
+
+        function hello(event){
+            event.preventDefault();
+
+            // Obter os dados
+            const form = new FormData(event.target);
+
+            // Construir objeto
+            aluno = {
+                nome: form.get('nome'),
+                matricula: form.get('matricula'),
+                turma: form.get('turma'),
+                foto: form.get('foto'),
+            }
+
+            // Enviar para a API
+            fetch("http://localhost:3000/alunos", {
+                method:'POST',
+                headers: {'Content-type': 'application/json'},
+                body: JSON.stringify(aluno),
+            })
+            .then( resposta => console.log(resposta))
+            .catch( erro => console.log(erro) )
+        }
+
+    </script>
+</body>
+</html>

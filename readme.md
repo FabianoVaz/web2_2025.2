@@ -4,4 +4,4 @@ https://www.npmjs.com/package/json-server
 npm install json-server
 
 ## Iniciando o Servidor
-npx json-server db.json
+npx json-server alunos.json
